@@ -12,7 +12,7 @@
  *  without the mediation of the ct.sorts array.  For missing value
  *  information it thus has to look at X directly using a macro.
  */
-printf("Filename is branch")
+
 	
 #include "causalTree.h"
 #include "node.h"

@@ -18,7 +18,13 @@
 #include "node.h"
 #include "causalTreeproto.h"
 
+#include <stdio.h>
+int main(int argc, char** argv)
+{
+    printf("Executable name: %s\n", argv[0]);
 
+    return 0;
+}
 
 pNode
 branch(pNode tree, int obs)

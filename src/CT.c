@@ -5,7 +5,7 @@
 #include "causalTree.h"
 #include "causalTreeproto.h"
 
-rprintf("Filename is %s", "CT")
+printf("%s\nLine %d:\n", __FILE__, __LINE__);
 
 
 

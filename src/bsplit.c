@@ -12,7 +12,7 @@
 #include "node.h"
 #include "causalTreeproto.h"
 
-printf("Filename is bsplit")
+
 
 void
 bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int bucketnum, int bucketMax,

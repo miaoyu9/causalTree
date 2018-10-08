@@ -5,11 +5,6 @@
 #include "causalTree.h"
 #include "causalTreeproto.h"
 
-
-
-
-
-
 static double *sums, *wtsums, *treatment_effect;
 static double *wts, *trs, *trsums;
 static int *countn;

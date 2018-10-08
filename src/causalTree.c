@@ -53,6 +53,8 @@
 #include "func_table.h"
 #include "causalTreeproto.h"
 
+printf("Filename is causal tree")
+
 SEXP
 causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP method2, 
            SEXP crossmeth2, SEXP crosshonest2, SEXP opt2,

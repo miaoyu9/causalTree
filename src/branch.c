@@ -16,7 +16,7 @@
 #include "node.h"
 #include "causalTreeproto.h"
 
-printf("%s\nLine %d:\n", __FILE__, __LINE__);
+rprintf("Filename is %s", "branch")
 
 pNode
 branch(pNode tree, int obs)

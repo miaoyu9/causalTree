@@ -5,7 +5,7 @@
 #include "causalTree.h"
 #include "causalTreeproto.h"
 
-printf("Filename is CT")
+
 
 
 

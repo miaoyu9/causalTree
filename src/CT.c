@@ -37,6 +37,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
     }
     *size = 1;
     *train_to_est_ratio = n * 1.0 / ct.NumHonest;
+       
     return 0;
 }
 

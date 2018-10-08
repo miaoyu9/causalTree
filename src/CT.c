@@ -1,9 +1,22 @@
 /*
  * split.Rule = CT
  */
+
+#include <stdio.h>
+int main(int argc, char** argv)
+{
+    printf("Executable name: %s\n", argv[0]);
+
+    return 0;
+}
+
+
 #include <math.h>
 #include "causalTree.h"
 #include "causalTreeproto.h"
+
+
+
 
 static double *sums, *wtsums, *treatment_effect;
 static double *wts, *trs, *trsums;

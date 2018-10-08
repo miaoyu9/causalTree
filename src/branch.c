@@ -16,6 +16,8 @@
 #include "node.h"
 #include "causalTreeproto.h"
 
+printf("%s\nLine %d:\n", __FILE__, __LINE__);
+
 pNode
 branch(pNode tree, int obs)
 {

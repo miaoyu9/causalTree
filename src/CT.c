@@ -36,7 +36,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
         trsums = wtsums + maxcat;
         wtsqrsums = trsums + maxcat;
         trsqrsums = wtsqrsums + maxcat;
-            Rprintf("ERROR for buket!\n");
+           
     }
     *size = 1;
     *train_to_est_ratio = n * 1.0 / ct.NumHonest;
@@ -77,6 +77,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     *value = effect;
     *risk = 4 * twt * max_y * max_y - alpha * twt * effect * effect + 
     (1 - alpha) * (1 + train_to_est_ratio) * twt * (tr_var /ttreat  + con_var / (twt - ttreat));
+         Rprintf("hello");
 }
 
 

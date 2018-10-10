@@ -130,7 +130,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     
     R_FlushConsole();
     //R_Process();
-    //Rprintf("test print\n");
+    Rprintf("file is causal tree");
     //printf("test print2\n");
     //getchar1=getchar();
     /*

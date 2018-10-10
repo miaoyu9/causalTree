@@ -58,7 +58,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
     
     for (i = 0; i < n; i++) {
-            Rprintf("file name is CT"); /* print name*/
+            
         temp1 += *y[i] * wt[i] * treatment[i];
         temp0 += *y[i] * wt[i] * (1 - treatment[i]);
         twt += wt[i];

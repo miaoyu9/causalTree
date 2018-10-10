@@ -19,7 +19,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
        double train_to_est_ratio)
 {
        
-   Rprintf("file name is bsplit"); /* print name*/
+   
     int i, j, k;
     int kk;
     int nc;
@@ -50,7 +50,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
         k = 0;
         for (j = n1; j < n2; j++) {
             kk = index[j];
-
+Rprintf("file name is bsplit"); /* print name*/
             /* x data not missing and wt > 0 */
             if(kk >= 0 && ct.wt[kk] > 0) { 
                 xtemp[k] = ct.xdata[i][kk];

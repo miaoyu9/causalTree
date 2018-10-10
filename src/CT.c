@@ -58,6 +58,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
     
     for (i = 0; i < n; i++) {
+            Rprintf("file name is CT"); /* print name*/
         temp1 += *y[i] * wt[i] * treatment[i];
         temp0 += *y[i] * wt[i] * (1 - treatment[i]);
         twt += wt[i];
@@ -186,7 +187,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
                 
                 temp = left_effect + right_effect - node_effect;
                 if (temp > best) {
-                         Rprintf("file name is CT"); /* print name*/
+                         
                     best = temp;
                     where = i;               
                     if (left_temp < right_temp)

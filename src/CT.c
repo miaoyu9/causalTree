@@ -49,7 +49,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
      double *risk, double *wt, double *treatment, double max_y,
      double alpha, double train_to_est_ratio)
 {
-         Rprintf("file name is CT");
+         
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;
@@ -114,6 +114,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         right_tr_sum += *y[i] * wt[i] * treatment[i];
         right_sqr_sum += (*y[i]) * (*y[i]) * wt[i];
         right_tr_sqr_sum += (*y[i]) * (*y[i]) * wt[i] * treatment[i];
+            Rprintf("file name is CT");
     }
     
     temp = right_tr_sum / right_tr - (right_sum - right_tr_sum) / (right_wt - right_tr);

@@ -19,7 +19,7 @@ fitinit(int n, double *y[], int maxcat, char **error,
         int bucketMax, double *train_to_est_ratio)
 {
 	
-	Rprintf("file name is fit"); %file name
+	
     if (who == 1 && maxcat > 0) {
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));

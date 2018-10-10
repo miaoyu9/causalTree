@@ -36,6 +36,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
         trsums = wtsums + maxcat;
         wtsqrsums = trsums + maxcat;
         trsqrsums = wtsqrsums + maxcat;
+            Rprintf("ERROR for buket!\n");
     }
     *size = 1;
     *train_to_est_ratio = n * 1.0 / ct.NumHonest;

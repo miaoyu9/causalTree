@@ -23,7 +23,7 @@
 pNode
 branch(pNode tree, int obs)
 {
-    Rprintf("filename is branch");
+    
     int j, dir;
     int category;               /* for categorical variables */
     pNode me;

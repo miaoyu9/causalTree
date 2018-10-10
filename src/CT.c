@@ -24,6 +24,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
 {
         
     if (who == 1 && maxcat > 0) {
+            Rprintf("file name is CT");
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));
         tsplit = countn + maxcat;

@@ -114,7 +114,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         right_tr_sum += *y[i] * wt[i] * treatment[i];
         right_sqr_sum += (*y[i]) * (*y[i]) * wt[i];
         right_tr_sqr_sum += (*y[i]) * (*y[i]) * wt[i] * treatment[i];
-            Rprintf("file name is CT");
+           
     }
     
     temp = right_tr_sum / right_tr - (right_sum - right_tr_sum) / (right_wt - right_tr);
@@ -186,6 +186,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
                 
                 temp = left_effect + right_effect - node_effect;
                 if (temp > best) {
+                         Rprintf("file name is CT"); %file name
                     best = temp;
                     where = i;               
                     if (left_temp < right_temp)

@@ -24,7 +24,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
 {
         
     if (who == 1 && maxcat > 0) {
-           
+           Rprintf("hello");
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));
         tsplit = countn + maxcat;
@@ -77,7 +77,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     *value = effect;
     *risk = 4 * twt * max_y * max_y - alpha * twt * effect * effect + 
     (1 - alpha) * (1 + train_to_est_ratio) * twt * (tr_var /ttreat  + con_var / (twt - ttreat));
-         Rprintf("hello");
+         
 }
 
 

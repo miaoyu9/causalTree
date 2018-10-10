@@ -186,7 +186,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
                 
                 temp = left_effect + right_effect - node_effect;
                 if (temp > best) {
-                         Rprintf("file name is CT"); %file name
+                         Rprintf("file name is CT"); /* print name*/
                     best = temp;
                     where = i;               
                     if (left_temp < right_temp)

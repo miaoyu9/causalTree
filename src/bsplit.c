@@ -19,7 +19,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
        double train_to_est_ratio)
 {
        
-   
+   Rprintf("file name is bsplit"); /* print name*/
     int i, j, k;
     int kk;
     int nc;
@@ -43,6 +43,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
      */
     me->primary = (pSplit) NULL;
     for (i = 0; i < ct.nvar; i++) {
+           
         index = ct.sorts[i];
         nc = ct.numcat[i];
         /* extract x and y data */

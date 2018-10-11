@@ -11,7 +11,7 @@ static double *uscratch;        /* variously used scratch vector */
 int
 policysplit_init(int n, double *y[], int maxcat, char **error,
 	       double *parm, int *size, int who, double *wt)
-{
+{Rprintf("policysplit_init\n");
     if (who == 1) {
 	/* If who==0 we are being called internally via xval, and don't
 	 *   need to rerun the initialization.
@@ -33,7 +33,7 @@ policysplit_init(int n, double *y[], int maxcat, char **error,
 */
 void
 policysplit_eval(int n, double *y[], double *value, double *risk, double *wt)
-{
+{Rprintf("policysplit_eval\n");
     int i;
 
     causalTree_callback1(n, y, wt, uscratch);
@@ -49,7 +49,7 @@ void
 policysplit(int n, double *y[], double *x, int nclass, int edge,
 	  double *improve, double *split, int *csplit, double myrisk,
 	  double *wt)
-{
+{Rprintf("policysplit\n");
     int i, j, k;
     int m;
     int left_n, right_n;
@@ -158,6 +158,6 @@ policysplit(int n, double *y[], double *x, int nclass, int edge,
  */
 double
 policysplit_pred(double *y, double *yhat)
-{
+{Rprintf("policysplit_pred\n");
     return 0.0;
 }

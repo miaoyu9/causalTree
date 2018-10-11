@@ -11,7 +11,7 @@
 
 pSplit
 insert_split(pSplit *listhead, int ncat, double improve, int max)
-{
+{Rprintf("insert_split.c\n");
     int nlist;
     pSplit s1, s2, s3 = NULL, s4;
 

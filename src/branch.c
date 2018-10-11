@@ -29,7 +29,7 @@ branch(pNode tree, int obs)
     pNode me;
     pSplit tsplit;
     double **xdata;
-
+Rprintf("branch.c\n");
     if (!tree->leftson) return NULL;
 
     me = tree;

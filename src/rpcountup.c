@@ -10,7 +10,7 @@
 
 void
 ctcountup(pNode me, int *nnode, int *nsplit, int *ncat)
-{
+{Rprintf("ctcountup\n");
     int node2, split2;
     int cat2;
     int i, j, k;

@@ -115,7 +115,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
     node_effect = alpha * temp * temp * right_wt - (1 - alpha) * (1 + train_to_est_ratio) 
         * right_wt * (tr_var / right_tr  + con_var / (right_wt - right_tr));
     
-    if (nclass == 0) {Rprintf("CT.c\n");
+    if (nclass == 0) {
         /* continuous predictor */
         left_wt = 0;
         left_tr = 0;
@@ -315,7 +315,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
 
 double
     CTpred(double *y, double wt, double treatment, double *yhat, double propensity)
-    {
+    {Rprintf("CT.c\n");
         double ystar;
         double temp;
         

@@ -142,11 +142,11 @@ void totD(int n, double *y[], double *x, int nclass, int edge, double *improve,
     
     
     if(nclass == 0) {
-      Rprintf("totd: inside cont. split\n");
+      Rprintf("totd: insided cont. split\n");
+            Rprintf("hello");
         cum_wt = (double *) ALLOC(n, sizeof(double));
         tmp_wt = (double *) ALLOC(n, sizeof(double));
-        fake_x = (double *) ALLOC(n, sizeof(double));
-        Rprintf("hello");
+        fake_x = (double *) ALLOC(n, sizeof(double));        
         tr_wt_sum = 0.;
         con_wt_sum = 0.;
         con_cum_wt = 0.;

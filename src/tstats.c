@@ -16,7 +16,7 @@ int
 tstatsinit(int n, double *y[], int maxcat, char **error,
         int *size, int who, double *wt, double *treatment, int bucketnum, 
         int bucektMax, double *train_to_est_ratio)
-{
+{Rprintf("tstatsinit\n");
     if (who == 1 && maxcat > 0) {
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));
@@ -39,7 +39,7 @@ tstatsinit(int n, double *y[], int maxcat, char **error,
 void
 tstatsss(int n, double *y[], double *value, double *con_mean,  double *tr_mean, double *risk,
          double *wt, double *treatment, double max_y, double alpha, double train_to_est_ratio)
-{
+{Rprintf("tstatsss\n");
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;
@@ -73,7 +73,7 @@ tstats(int n, double *y[], double *x, int nclass,
         int edge, double *improve, double *split, int *csplit,
         double myrisk, double *wt, double *treatment, int minsize, double alpha, 
         double train_to_est_ratio)
-{
+{Rprintf("tstats\n");
     int i, j;
     double temp;
     double left_sum, right_sum;
@@ -331,7 +331,7 @@ tstats(int n, double *y[], double *x, int nclass,
 }
 
 double tstatspred(double *y, double wt, double treatment, double *yhat, double propensity) // pass in ct.which
-{
+{Rprintf("double tstatspred\n");
     double ystar;
     double temp;
         

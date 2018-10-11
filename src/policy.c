@@ -15,7 +15,7 @@ int
 policyinit(int n, double *y[], int maxcat, char **error,
 		int *size, int who, double *wt, double *treatment, 
 		int bucketnum, int bucketMax, double *train_to_est_ratio)
-{
+{Rprintf("policyinit\n");
 	if (who == 1 && maxcat > 0) {
 		graycode_init0(maxcat);
 		countn = (int *) ALLOC(2 * maxcat, sizeof(int));
@@ -39,7 +39,7 @@ void
 policyss(int n, double *y[], double *value,  double *con_mean, double *tr_mean, 
 		double *risk, double *wt, double *treatment, double max_y,
 		double alpha, double train_to_est_ratio)
-{
+{Rprintf("policyss\n");
 	int i;
 	double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
 	double ttreat = 0.;
@@ -71,7 +71,7 @@ policyss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
 void policy(int n, double *y[], double *x, int nclass, int edge, double *improve, double *split, 
 		int *csplit, double myrisk, double *wt, double *treatment, int minsize, double alpha,
 		double train_to_est_ratio)
-{
+{Rprintf("policy\n");
 	int i, j;
 	double temp;
 	double left_sum, right_sum;
@@ -314,7 +314,7 @@ void policy(int n, double *y[], double *x, int nclass, int edge, double *improve
 
 double
 policypred(double *y, double wt, double treatment, double *yhat, double propensity)
-{
+{Rprintf("policypred\n");
 	double ystar;
 	double temp;
 

@@ -353,8 +353,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     }
     tree->complexity = tree->risk;
     ct.alpha = ct.complexity * tree->risk;
-           char greeting[] = "Hello, World\n";
-printf(greeting);
+          
 
     /*
      * Do the basic tree
@@ -414,6 +413,8 @@ printf(greeting);
     for (i = 0; i < 3 + ct.num_resp; i++) {
         ddnode[i] = dptr;
         dptr += nodecount;
+                char greeting[] = "Hello, World\n";
+printf(greeting);
     }
 
     dsplit3 = PROTECT(allocMatrix(REALSXP, splitcount, 3));

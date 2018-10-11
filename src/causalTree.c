@@ -132,15 +132,17 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     
     R_FlushConsole();
     
-    Rprintf("test print\n");
-    printf("test print2\n");
-    getchar1=getchar();
+    //Rprintf("test print\n");
+   // printf("test print2\n");
+    //getchar1=getchar();
     /*
      * initialize the splitting functions from the function table
      */
     
     if (split_Rule <= NUM_SPLIT_RULE && crossmeth <= NUM_CROSSMETH) {
-               print("Enter the second value:")
+
+               char greeting[] = "Hello, World\n";
+printf(greeting);
         split_id = split_Rule - 1;
         cv_id = crossmeth - 1;
         ct_init = split_func_table[split_id].init_split;

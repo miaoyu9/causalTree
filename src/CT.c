@@ -1,15 +1,9 @@
 /*
  * split.Rule = CT
  */
-
-
-
 #include <math.h>
 #include "causalTree.h"
 #include "causalTreeproto.h"
-
-
-
 
 static double *sums, *wtsums, *treatment_effect;
 static double *wts, *trs, *trsums;
@@ -21,8 +15,8 @@ int
 CTinit(int n, double *y[], int maxcat, char **error,
         int *size, int who, double *wt, double *treatment, 
         int bucketnum, int bucketMax, double *train_to_est_ratio)
-{   
-    if (who == 1 && maxcat > 0) 
+{
+    if (who == 1 && maxcat > 0) {
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));
         tsplit = countn + maxcat;
@@ -33,11 +27,10 @@ CTinit(int n, double *y[], int maxcat, char **error,
         wtsums = sums + maxcat;
         trsums = wtsums + maxcat;
         wtsqrsums = trsums + maxcat;
-        trsqrsums = wtsqrsums + maxcat;   
+        trsqrsums = wtsqrsums + maxcat;
     }
     *size = 1;
     *train_to_est_ratio = n * 1.0 / ct.NumHonest;
-       
     return 0;
 }
 
@@ -46,16 +39,15 @@ void
 CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean, 
      double *risk, double *wt, double *treatment, double max_y,
      double alpha, double train_to_est_ratio)
-{   
+{
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;
     double effect;
     double tr_var, con_var;
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
-   
+    
     for (i = 0; i < n; i++) {
-  
         temp1 += *y[i] * wt[i] * treatment[i];
         temp0 += *y[i] * wt[i] * (1 - treatment[i]);
         twt += wt[i];
@@ -73,7 +65,6 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     *value = effect;
     *risk = 4 * twt * max_y * max_y - alpha * twt * effect * effect + 
     (1 - alpha) * (1 + train_to_est_ratio) * twt * (tr_var /ttreat  + con_var / (twt - ttreat));
-         
 }
 
 
@@ -113,7 +104,6 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         right_tr_sum += *y[i] * wt[i] * treatment[i];
         right_sqr_sum += (*y[i]) * (*y[i]) * wt[i];
         right_tr_sqr_sum += (*y[i]) * (*y[i]) * wt[i] * treatment[i];
-           
     }
     
     temp = right_tr_sum / right_tr - (right_sum - right_tr_sum) / (right_wt - right_tr);
@@ -185,7 +175,6 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
                 
                 temp = left_effect + right_effect - node_effect;
                 if (temp > best) {
-                         
                     best = temp;
                     where = i;               
                     if (left_temp < right_temp)
@@ -232,7 +221,6 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         }
         
         for (i = 0; i < nclass; i++) {
-                 
             if (countn[i] > 0) {
                 tsplit[i] = RIGHT;
                 treatment_effect[i] = trsums[j] / trs[j] - (wtsums[j] - trsums[j]) / (wts[j] - trs[j]);
@@ -334,4 +322,3 @@ double
         temp = ystar - *yhat;
         return temp * temp * wt;
     }
-

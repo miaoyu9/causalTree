@@ -280,8 +280,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
         ct.which[i] = 1;
         temp += wt[i];
         temp2 += treatment[i];
-                char greeting[] = "Hello, World\n";
-printf(greeting);
+              
     }
     
     train_to_est_ratio = 100;
@@ -307,7 +306,8 @@ printf(greeting);
         //tot:
         (*ct_eval) (n, ct.ydata, tree->response_est, tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment, ct.max_y, ct.propensity);
-    } else if (split_Rule == 2) {
+    } else if (split_Rule == 2) {  char greeting[] = "Hello, World\n";
+printf(greeting);
         // ct:
         (*ct_eval) (n, ct.ydata, tree->response_est, tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment,  ct.max_y, split_alpha, train_to_est_ratio);

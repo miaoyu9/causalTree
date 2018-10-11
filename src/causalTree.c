@@ -120,7 +120,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     crossmeth = asInteger(crossmeth2);
     crosshonest = asInteger(crosshonest2);
     split_Rule = asInteger(split_Rule2);
-           printf("%d", split_Rule);
+           
     bucketnum  = asInteger(bucketnum2);
     bucketMax = asInteger(bucketMax2);
     NumHonest = asInteger(NumHonest2);
@@ -138,7 +138,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
      */
     
     if (split_Rule <= NUM_SPLIT_RULE && crossmeth <= NUM_CROSSMETH) {
-               Rprintf("ERROR for buket!\n");
+               
         split_id = split_Rule - 1;
         cv_id = crossmeth - 1;
         ct_init = split_func_table[split_id].init_split;
@@ -147,7 +147,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
         ct_xeval = cv_func_table[cv_id].xeval;
         ct.num_y = asInteger(ny2);
     } else {
-        error(_("Invalid value for 'split.Rule' or 'cv.option' "));
+        error(_("2Invalid value for 'split.Rule' or 'cv.option' "));
     }
     
     

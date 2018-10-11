@@ -474,8 +474,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     }
 
     /* Create the output list */
-            char greeting[] = "Hello, World\n";
-Rprintf(greeting);
+            
     int nout = catcount > 0 ? 7 : 6;
     SEXP rlist = PROTECT(allocVector(VECSXP, nout));
     SEXP rname = allocVector(STRSXP, nout);

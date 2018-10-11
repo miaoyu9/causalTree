@@ -9,7 +9,7 @@
 void
 matching_rundown(pNode tree, int obs, int neighbor, double *cp, double *xpred, 
                  double *xpred2, double *xtemp)
-{
+{Rprintf("matching_rundown\n");
     int i, obs2 = (obs < 0) ? -(1 + obs) : obs;
     pNode otree =  tree;
     pNode tree2 = tree;

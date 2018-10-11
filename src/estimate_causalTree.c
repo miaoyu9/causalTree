@@ -32,7 +32,7 @@ estimate_causalTree0(const int *dimx, int nnode,
                      const int *vnum,
         const double *split2, const int *csplit2, const int *usesur,
         const double *xdata2, const int *xmiss2, int *where)
-{
+{ Rprintf("estimate_causalTree0\n");
     int i, j;
     int n;
     int ncat;
@@ -135,7 +135,7 @@ next:
 estimate_causalTree(SEXP dimx, SEXP nnode, SEXP nsplit, SEXP dimc,
         SEXP nnum, SEXP nodes2, SEXP vnum, SEXP split2,
         SEXP csplit2, SEXP usesur, SEXP xdata2, SEXP xmiss2)
-{
+{  
     int n = asInteger(dimx);
     SEXP where = PROTECT(allocVector(INTSXP, n));
     estimate_causalTree0(INTEGER(dimx), asInteger(nnode), asInteger(nsplit),

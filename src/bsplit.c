@@ -40,7 +40,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
     /*
      * test out the variables 1 at at time
      */
-       Rprintf("bsplit.c\n");
+      
     me->primary = (pSplit) NULL;
     for (i = 0; i < ct.nvar; i++) {
         index = ct.sorts[i];

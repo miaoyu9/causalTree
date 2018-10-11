@@ -8,7 +8,7 @@
 
 double
 tot_xpred(double *y, double wt, double treatment, double *yhat, double propensity) 
-{
+{Rprintf("tot_xpred\n");
     double ystar;
     double temp;
         
@@ -18,7 +18,7 @@ tot_xpred(double *y, double wt, double treatment, double *yhat, double propensit
 }
 
 double matching_xpred(double *y1, double *y2, double wt1, double wt2, double treatment1,
-                     double treatment2, double pred1, double pred2) {
+                     double treatment2, double pred1, double pred2) {Rprintf("matching_xpred\n");
     double temp;
     temp = (2 * treatment1 - 1) * (*y1 - *y2);
     return (temp - 0.5 * (pred1 + pred2)) * (temp - 0.5 * (pred1 + pred2));
@@ -27,7 +27,7 @@ double matching_xpred(double *y1, double *y2, double wt1, double wt2, double tre
 
 double fitH_xpred(double *y, double wt, double treatment, double tr_mean, 
                   double con_mean, double trs, double cons, double alpha,
-                  double xtrain_to_est_ratio) {
+                  double xtrain_to_est_ratio) {Rprintf("fitH_xpred\n");
     double res;
     double tr_var;
     double con_var;
@@ -51,7 +51,7 @@ double fitH_xpred(double *y, double wt, double treatment, double tr_mean,
     return res;
 }
 
-double fitA_xpred(double *y, double wt, double treatment, double tree_tr_mean, double tree_con_mean) {
+double fitA_xpred(double *y, double wt, double treatment, double tree_tr_mean, double tree_con_mean) {Rprintf("fitA_xpred\n");
     double res;
     if (treatment == 0) {
         res = (y[0] - tree_con_mean) * (y[0] - tree_con_mean);
@@ -63,7 +63,7 @@ double fitA_xpred(double *y, double wt, double treatment, double tree_tr_mean, d
 
 double CTH_xpred(double *y, double wt, double treatment, double tr_mean,
                  double con_mean, double trs, double cons, double alpha, 
-                 double xtrain_to_est_ratio, double propensity) {
+                 double xtrain_to_est_ratio, double propensity) {Rprintf("CTH_xpred\n");
    double res;
    double tr_var;
    double con_var;
@@ -86,7 +86,7 @@ double CTH_xpred(double *y, double wt, double treatment, double tr_mean,
 }
 
 double CTA_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean,
-                     double tree_tr_mean, double tree_con_mean, double alpha) {
+                     double tree_tr_mean, double tree_con_mean, double alpha) {Rprintf("CTA_xpred\n");
     double res;
     double effect_tr = tree_tr_mean - tree_con_mean;
     double effect_te = tr_mean - con_mean;
@@ -98,7 +98,7 @@ double CTA_xpred(double *y, double wt, double treatment, double tr_mean, double 
 // set temporarily as CTH_xpred
 double userH_xpred(double *y, double wt, double treatment, double tr_mean,
                  double con_mean, double trs, double cons, double alpha, 
-                 double xtrain_to_est_ratio, double propensity) {
+                 double xtrain_to_est_ratio, double propensity) {Rprintf("userH_xpred\n");
     double res;
     double tr_var;
     double con_var;
@@ -122,7 +122,7 @@ double userH_xpred(double *y, double wt, double treatment, double tr_mean,
 
 // set temporarily as CTA_xpred
 double userA_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean,
-                 double tree_tr_mean, double tree_con_mean, double alpha) {
+                 double tree_tr_mean, double tree_con_mean, double alpha) {Rprintf("userA_xpred\n");
     double res;
     double effect_tr = tree_tr_mean - tree_con_mean;
     double effect_te = tr_mean - con_mean;
@@ -138,7 +138,7 @@ double userA_xpred(double *y, double wt, double treatment, double tr_mean, doubl
 // policyH
 double policyH_xpred(double *y, double wt, double treatment, double tr_mean,
                    double con_mean, double trs, double cons, double alpha, 
-                   double xtrain_to_est_ratio, double propensity) {
+                   double xtrain_to_est_ratio, double propensity) {Rprintf("policyH_xpred\n");
   double res;
   double tr_var;
   double con_var;
@@ -162,7 +162,7 @@ double policyH_xpred(double *y, double wt, double treatment, double tr_mean,
 
 // policyA
 double policyA_xpred(double *y, double wt, double treatment, double tr_mean, double con_mean,
-                   double tree_tr_mean, double tree_con_mean, double alpha, double gamma) {
+                   double tree_tr_mean, double tree_con_mean, double alpha, double gamma) {Rprintf("policyA_xpred\n");
   double res;
   double effect_tr = tree_tr_mean - tree_con_mean;
   double effect_te = tr_mean - con_mean;

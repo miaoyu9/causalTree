@@ -147,7 +147,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
         ct_xeval = cv_func_table[cv_id].xeval;
         ct.num_y = asInteger(ny2);
     } else {
-        error(_("2Invalid value for 'split.Rule' or 'cv.option' "));
+        error(_("Invalid value for 'split.Rule' or 'cv.option' "));
     }
     
     

@@ -23,7 +23,7 @@
 pNode
 branch(pNode tree, int obs)
 {
-    
+   printf("test print2\n");
     int j, dir;
     int category;               /* for categorical variables */
     pNode me;

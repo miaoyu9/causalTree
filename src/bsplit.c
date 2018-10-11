@@ -50,7 +50,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
 
             /* x data not missing and wt > 0 */
             if(kk >= 0 && ct.wt[kk] > 0) { 
-                    printf("hello");
+                    
                 xtemp[k] = ct.xdata[i][kk];
                 ytemp[k] = ct.ydata[kk];
                 wtemp[k] = ct.wt[kk];

@@ -22,7 +22,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
         int *size, int who, double *wt, double *treatment, 
         int bucketnum, int bucketMax, double *train_to_est_ratio)
 {
-        Rprintf("ERROR for buket!\n");
+        
     if (who == 1 && maxcat > 0) {
            
         graycode_init0(maxcat);
@@ -59,7 +59,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
     
     for (i = 0; i < n; i++) {
-            
+Rprintf("CT");  
         temp1 += *y[i] * wt[i] * treatment[i];
         temp0 += *y[i] * wt[i] * (1 - treatment[i]);
         twt += wt[i];

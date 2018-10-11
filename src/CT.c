@@ -24,7 +24,6 @@ CTinit(int n, double *y[], int maxcat, char **error,
 {
         
     if (who == 1 && maxcat > 0) {
-           
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));
         tsplit = countn + maxcat;
@@ -35,8 +34,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
         wtsums = sums + maxcat;
         trsums = wtsums + maxcat;
         wtsqrsums = trsums + maxcat;
-        trsqrsums = wtsqrsums + maxcat;
-           
+        trsqrsums = wtsqrsums + maxcat;   
     }
     *size = 1;
     *train_to_est_ratio = n * 1.0 / ct.NumHonest;
@@ -49,8 +47,7 @@ void
 CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean, 
      double *risk, double *wt, double *treatment, double max_y,
      double alpha, double train_to_est_ratio)
-{
-         
+{   
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;

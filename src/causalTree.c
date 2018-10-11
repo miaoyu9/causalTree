@@ -119,6 +119,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     crossmeth = asInteger(crossmeth2);
     crosshonest = asInteger(crosshonest2);
     split_Rule = asInteger(split_Rule2);
+           printf("%d", split_Rule);
     bucketnum  = asInteger(bucketnum2);
     bucketMax = asInteger(bucketMax2);
     NumHonest = asInteger(NumHonest2);

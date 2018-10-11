@@ -18,7 +18,7 @@
 
 void
 surrogate(pNode me, int n1, int n2)
-{
+{Rprintf("surrogate\n");
     int i, j, k;
     int var;                    /* the primary split variable */
     double split;

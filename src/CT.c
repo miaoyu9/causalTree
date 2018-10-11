@@ -98,7 +98,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
     double tr_var, con_var;
     double right_sqr_sum, right_tr_sqr_sum, left_sqr_sum, left_tr_sqr_sum;
     double left_tr_var, left_con_var, right_tr_var, right_con_var;
-    printf("%s\n","CT");
+    
     right_wt = 0.;
     right_tr = 0.;
     right_sum = 0.;

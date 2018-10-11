@@ -34,6 +34,7 @@ anovainit(int n, double *y[], int maxcat, char **error,
 void
 anovass(int n, double *y[], double *value, double *risk, double *wt, double *treatment, double max_y)
 {
+        Rprintf("hello");
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;

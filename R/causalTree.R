@@ -95,7 +95,7 @@ causalTree <- function(formula, data, weights, treatment, subset,
 	                                       "fitD", "tstatsD", "user", "userD","policy","policyD"))
 	print(split.Rule.int)
 	print(split.Rule)
-	print(split.Rule)
+	
 	if (is.na(split.Rule.int)) stop("Invalid splitting rule.")
 	split.Rule <- c("TOT", "CT", "fit", "tstats", "TOTD", "CTD", "fitD", 
 	                "tstatsD", "user", "userD","policy","policyD")[split.Rule.int]

@@ -269,8 +269,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     /*
      * initialize the top node of the tree
      */
-           char greeting[] = "Hello, World\n";
-printf(greeting);
+          
     errmsg = _("unknown error");
     which3 = PROTECT(allocVector(INTSXP, n));
     ct.which = INTEGER(which3);
@@ -281,6 +280,8 @@ printf(greeting);
         ct.which[i] = 1;
         temp += wt[i];
         temp2 += treatment[i];
+                char greeting[] = "Hello, World\n";
+printf(greeting);
     }
     
     train_to_est_ratio = 100;

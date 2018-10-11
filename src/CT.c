@@ -53,7 +53,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double effect;
     double tr_var, con_var;
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
-    Rprintf("CTCT.c\n");
+   
     for (i = 0; i < n; i++) {
   
         temp1 += *y[i] * wt[i] * treatment[i];

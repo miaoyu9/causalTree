@@ -61,7 +61,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
         SEXP xvar2, SEXP split_alpha2, SEXP cv_alpha2, SEXP NumHonest2, SEXP gamma2)
 {
   
-   Rprintf("causalTree.c\n");
+   
     
     pNode tree;          /* top node of the tree */
     char *errmsg;
@@ -139,7 +139,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
      * initialize the splitting functions from the function table
      */
     
-    if (split_Rule <= NUM_SPLIT_RULE && crossmeth <= NUM_CROSSMETH) {
+    if (split_Rule <= NUM_SPLIT_RULE && crossmeth <= NUM_CROSSMETH) {Rprintf("causalTree.c\n");
 
 
         split_id = split_Rule - 1;

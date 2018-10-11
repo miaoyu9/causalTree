@@ -117,7 +117,6 @@ void tot(int n, double *y[], double *x, int nclass, int edge, double *improve,
     
     if(nclass == 0) {
       Rprintf("tot: inside cont. split\n");
-            Rprintf("hello");
         left_sum = 0;
         left_wt = 0;
         left_n = 0;

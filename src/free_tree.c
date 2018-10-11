@@ -17,7 +17,7 @@ free_split(pSplit spl)
 /* use freenode if the tree was CALLOC-ed, from xval.c */
 void
 free_tree(pNode node, int freenode)
-{Rprintf("free_tree\n");
+{
     if (node->rightson)
 	free_tree(node->rightson, 1);
     if (node->leftson)

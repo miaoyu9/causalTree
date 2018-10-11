@@ -18,8 +18,6 @@ void
 bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int bucketnum, int bucketMax,
        double train_to_est_ratio)
 {
-       
-   
     int i, j, k;
     int kk;
     int nc;
@@ -43,7 +41,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
      */
     me->primary = (pSplit) NULL;
     for (i = 0; i < ct.nvar; i++) {
-           
+           printf("hello");
         index = ct.sorts[i];
         nc = ct.numcat[i];
         /* extract x and y data */

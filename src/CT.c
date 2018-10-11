@@ -72,7 +72,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
 void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, double *split, 
         int *csplit, double myrisk, double *wt, double *treatment, int minsize, double alpha,
         double train_to_est_ratio)
-{Rprintf("CT.c\n");
+{
     int i, j;
     double temp;
     double left_sum, right_sum;
@@ -115,7 +115,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
     node_effect = alpha * temp * temp * right_wt - (1 - alpha) * (1 + train_to_est_ratio) 
         * right_wt * (tr_var / right_tr  + con_var / (right_wt - right_tr));
     
-    if (nclass == 0) {
+    if (nclass == 0) {Rprintf("CT.c\n");
         /* continuous predictor */
         left_wt = 0;
         left_tr = 0;

@@ -141,8 +141,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     
     if (split_Rule <= NUM_SPLIT_RULE && crossmeth <= NUM_CROSSMETH) {
 
-               char greeting[] = "Hello, World\n";
-printf(greeting);
+
         split_id = split_Rule - 1;
         cv_id = crossmeth - 1;
         ct_init = split_func_table[split_id].init_split;
@@ -270,6 +269,8 @@ printf(greeting);
     /*
      * initialize the top node of the tree
      */
+           char greeting[] = "Hello, World\n";
+printf(greeting);
     errmsg = _("unknown error");
     which3 = PROTECT(allocVector(INTSXP, n));
     ct.which = INTEGER(which3);

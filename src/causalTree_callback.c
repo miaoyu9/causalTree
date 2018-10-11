@@ -68,7 +68,7 @@ init_ctcallback(SEXP rhox, SEXP ny, SEXP nr, SEXP expr1x, SEXP expr2x)
  */
 void
 causalTree_callback0(int *nr)
-{
+{ Rprintf("causalTree_callback0.c\n");
     *nr = rsave;
 }
 
@@ -77,7 +77,7 @@ causalTree_callback0(int *nr)
  */
 void
 causalTree_callback1(int n, double *y[], double *wt, double *z)
-{
+{  Rprintf("causalTree_callback1.c\n");
     int i, j, k;
     SEXP value;
     double *dptr;
@@ -116,7 +116,7 @@ causalTree_callback1(int n, double *y[], double *wt, double *z)
 void
 causalTree_callback2(int n, int ncat, double *y[], double *wt,
 		double *x, double *good)
-{
+{Rprintf("causalTree_callback2.c\n");
     int i, j, k;
     SEXP goodness;
     double *dptr;

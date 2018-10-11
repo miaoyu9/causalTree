@@ -35,7 +35,7 @@ honest_estimate_rparttree0(const int *dimx, int nnode, int nsplit, const int *di
 	    const double *split2, const int *csplit2, const int *usesur,
 	    int *n1, double *wt1, double *dev1, double *yval1,
 	    const double *xdata2,const double *wt2,const double *y2, const int *xmiss2, int *where)
-{
+{Rprintf("honest_estimate_rparttree0\n");
     int i, j;
     int n;
     int ncat;

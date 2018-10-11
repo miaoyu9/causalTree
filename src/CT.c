@@ -67,7 +67,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     effect = temp1 / ttreat - temp0 / (twt - ttreat);
     tr_var = tr_sqr_sum / ttreat - temp1 * temp1 / (ttreat * ttreat);
     con_var = con_sqr_sum / (twt - ttreat) - temp0 * temp0 / ((twt - ttreat) * (twt - ttreat));
-
+printf("%s\n","CT");
     *tr_mean = temp1 / ttreat;
     *con_mean = temp0 / (twt - ttreat);
     *value = effect;
@@ -232,7 +232,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         }
         
         for (i = 0; i < nclass; i++) {
-                 Rprintf("hello");
+                 
             if (countn[i] > 0) {
                 tsplit[i] = RIGHT;
                 treatment_effect[i] = trsums[j] / trs[j] - (wtsums[j] - trsums[j]) / (wts[j] - trs[j]);

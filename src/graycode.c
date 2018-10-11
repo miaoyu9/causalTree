@@ -16,13 +16,13 @@ static int maxc, gsave;
 
 void
 graycode_init0(int maxcat)
-{
+{Rprintf("graycode_init0\n");
     gray = (int *) ALLOC(maxcat, sizeof(int));
 }
 
 void
 graycode_init1(int numcat, int *count)
-{
+{Rprintf("graycode_init1\n");
     int i;
 
     maxc = numcat;
@@ -34,7 +34,7 @@ graycode_init1(int numcat, int *count)
 
 void
 graycode_init2(int numcat, int *count, double *val)
-{
+{Rprintf("graycode_init2\n");
     int i, j, k;
     double temp;
     maxc = numcat;
@@ -78,7 +78,7 @@ graycode_init2(int numcat, int *count, double *val)
 */
 int
 graycode(void)
-{
+{Rprintf("graycode\n");
     int i;
 
     if (gsave > -2) {           /* ordered data */

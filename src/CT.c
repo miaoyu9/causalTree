@@ -10,14 +10,14 @@ static double *wts, *trs, *trsums;
 static int *countn;
 static int *tsplit;
 static double *wtsqrsums, *trsqrsums;
-
+/*N */ 
 int
 CTinit(int n, double *y[], int maxcat, char **error,
         int *size, int who, double *wt, double *treatment, 
         int bucketnum, int bucketMax, double *train_to_est_ratio)
 {
     if (who == 1 && maxcat > 0) {
-            Rprintf("CT.c\n");
+           
         graycode_init0(maxcat);
         countn = (int *) ALLOC(2 * maxcat, sizeof(int));
         tsplit = countn + maxcat;
@@ -40,7 +40,7 @@ void
 CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean, 
      double *risk, double *wt, double *treatment, double max_y,
      double alpha, double train_to_est_ratio)
-{
+{Rprintf("CT.c\n");
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;

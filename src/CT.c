@@ -315,7 +315,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
 
 double
     CTpred(double *y, double wt, double treatment, double *yhat, double propensity)
-    {Rprintf("CT.c\n");
+    {
         double ystar;
         double temp;
         

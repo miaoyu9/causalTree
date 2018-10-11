@@ -122,7 +122,7 @@ void tot(int n, double *y[], double *x, int nclass, int edge, double *improve,
         left_n = 0;
         left_tr = 0;
         best = 0;
-            Rprintf("hello");
+            
         for (i = 0; right_n > edge; i++) {
             left_wt += wt[i];
             right_wt -= wt[i];

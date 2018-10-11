@@ -41,7 +41,6 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
      */
     me->primary = (pSplit) NULL;
     for (i = 0; i < ct.nvar; i++) {
-           printf("hello");
         index = ct.sorts[i];
         nc = ct.numcat[i];
         /* extract x and y data */
@@ -51,6 +50,7 @@ bsplit(pNode me, int n1, int n2, int minsize, int split_Rule, double alpha, int 
 
             /* x data not missing and wt > 0 */
             if(kk >= 0 && ct.wt[kk] > 0) { 
+                    printf("hello");
                 xtemp[k] = ct.xdata[i][kk];
                 ytemp[k] = ct.ydata[kk];
                 wtemp[k] = ct.wt[kk];

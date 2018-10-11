@@ -38,7 +38,7 @@ partition(int nodenum, pNode splitnode, double *sumrisk, int n1, int n2,
     n = n2 - n1;                /* total number of observations */
     me->id = nodenum;
     
-//#ifdef DEBUG
+#ifdef DEBUG
     
     //fptr=fopen("C:\\Users\\vikasr\\Documents\\debug_text.txt","w");
     //fprintf(fptr,"test print\n");
@@ -47,7 +47,7 @@ partition(int nodenum, pNode splitnode, double *sumrisk, int n1, int n2,
    Rprintf("test print\n");
     R_ShowMessage("R_show_message\n");
     
-//#endif
+#endif
     
     if (nodenum > 1) {
         twt = 0;

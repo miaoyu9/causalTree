@@ -32,7 +32,7 @@
 
 void
 make_cp_list(pNode me, double parent, CpTable cptable_head)
-{
+{Rprintf("make_cp_list.c\n");
     double me_cp;
     CpTable cplist, cptemp = NULL;
 

@@ -40,7 +40,7 @@ void
 CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean, 
      double *risk, double *wt, double *treatment, double max_y,
      double alpha, double train_to_est_ratio)
-{
+{Rprintf("CT_CTss\n");
     int i;
     double temp0 = 0., temp1 = 0., twt = 0.; /* sum of the weights */ 
     double ttreat = 0.;
@@ -72,7 +72,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
 void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, double *split, 
         int *csplit, double myrisk, double *wt, double *treatment, int minsize, double alpha,
         double train_to_est_ratio)
-{
+{Rprintf("CT\n");
     int i, j;
     double temp;
     double left_sum, right_sum;

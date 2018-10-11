@@ -306,8 +306,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
         //tot:
         (*ct_eval) (n, ct.ydata, tree->response_est, tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment, ct.max_y, ct.propensity);
-    } else if (split_Rule == 2) {  char greeting[] = "Hello, World\n";
-printf(greeting);
+    } else if (split_Rule == 2) {  
         // ct:
         (*ct_eval) (n, ct.ydata, tree->response_est, tree->controlMean, tree->treatMean, 
          &(tree->risk), wt, treatment,  ct.max_y, split_alpha, train_to_est_ratio);
@@ -354,6 +353,8 @@ printf(greeting);
     }
     tree->complexity = tree->risk;
     ct.alpha = ct.complexity * tree->risk;
+           char greeting[] = "Hello, World\n";
+printf(greeting);
 
     /*
      * Do the basic tree

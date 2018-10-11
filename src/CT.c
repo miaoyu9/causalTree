@@ -232,6 +232,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         }
         
         for (i = 0; i < nclass; i++) {
+                 Rprintf("hello");
             if (countn[i] > 0) {
                 tsplit[i] = RIGHT;
                 treatment_effect[i] = trsums[j] / trs[j] - (wtsums[j] - trsums[j]) / (wts[j] - trs[j]);

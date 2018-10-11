@@ -53,8 +53,6 @@
 #include "func_table.h"
 #include "causalTreeproto.h"
 
-
-
 SEXP
 causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP method2, 
            SEXP crossmeth2, SEXP crosshonest2, SEXP opt2,
@@ -130,7 +128,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     
     R_FlushConsole();
     //R_Process();
-   
+    //Rprintf("test print\n");
     //printf("test print2\n");
     //getchar1=getchar();
     /*

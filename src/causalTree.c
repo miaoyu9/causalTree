@@ -17,7 +17,7 @@
  *                  5 - CTH
  *                  6 - CTA
  *                  
- *      opt  =  vector of options.  Same order as causalTree.control, as a vector
+ *      opt  =  vector of options.  Same order as Tree.control, as a vector
  *                   of doubles.
  *      minsize = minimum number of treated observations, control observations in a leaf
  *      p = propensity score
@@ -131,7 +131,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     char getchar1;
     
     R_FlushConsole();
-   Rprintf("causalTree.c\n");
+  
     //Rprintf("test print\n");
    // printf("test print2\n");
     //getchar1=getchar();

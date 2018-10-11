@@ -131,8 +131,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
     char getchar1;
     
     R_FlushConsole();
-    char greeting[] = "Hello, World\n";
-Rprintf(greeting);
+   
     //Rprintf("test print\n");
    // printf("test print2\n");
     //getchar1=getchar();

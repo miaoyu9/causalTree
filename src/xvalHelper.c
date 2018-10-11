@@ -12,7 +12,7 @@
 #endif
 static double INFTY = 9999999999; // infinity
 
-int findNeighbor(int obs, int k) { 
+int findNeighbor(int obs, int k) { Rprintf("findNeighbor\n");
   int i, j, temp, neighbor;
   int obs2 = (obs < 0)? -(1 + obs) : obs;
   double dist, min = INFTY;
@@ -34,7 +34,7 @@ int findNeighbor(int obs, int k) {
 }
 
 
-double measureDistance(int i, int j) {
+double measureDistance(int i, int j) {Rprintf("measureDistance\n");
   int k;
   double distance = 0;
   for (k = 0; k < ct.nvar; k++) {

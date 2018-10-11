@@ -140,7 +140,7 @@ causalTree(SEXP ncat2, SEXP split_Rule2, SEXP bucketnum2, SEXP bucketMax2, SEXP 
      */
     
     if (split_Rule <= NUM_SPLIT_RULE && crossmeth <= NUM_CROSSMETH) {
-              
+               print("Enter the second value:")
         split_id = split_Rule - 1;
         cv_id = crossmeth - 1;
         ct_init = split_func_table[split_id].init_split;

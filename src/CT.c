@@ -47,7 +47,9 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double effect;
     double tr_var, con_var;
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
-    
+ 
+ /* beta */ 
+ 
     for (i = 0; i < n; i++) {
         temp1 += *y[i] * wt[i] * treatment[i];
         temp0 += *y[i] * wt[i] * (1 - treatment[i]);
@@ -72,7 +74,8 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
 void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, double *split, 
         int *csplit, double myrisk, double *wt, double *treatment, int minsize, double alpha,
         double train_to_est_ratio)
-{Rprintf("CT\n");
+{
+    Rprintf("CT\n");
     int i, j;
     double temp;
     double left_sum, right_sum;

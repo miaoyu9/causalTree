@@ -38,7 +38,7 @@ CTinit(int n, double *y[], int maxcat, char **error,
 
 void
 CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean, 
-     double *risk, double *wt, double *treatment, double max_y,
+     double *risk, double *wt, double *beta_te, double *beta_est, double max_y,
      double alpha, double train_to_est_ratio)
 {Rprintf("CT_CTss\n");
     int i;
@@ -51,10 +51,10 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
  /* beta */ 
  
     for (i = 0; i < n; i++) {
-        temp1 += *y[i] * wt[i] * treatment[i];
-        temp0 += *y[i] * wt[i] * (1 - treatment[i]);
+        temp1 += *beta_te[i] * wt[i] ;
+        temp0 += *beta_est[i] * wt[i] ;
         twt += wt[i];
-        ttreat += wt[i] * treatment[i];
+     /*   ttreat += wt[i] * treatment[i]; */
         tr_sqr_sum += (*y[i]) * (*y[i]) * wt[i] * treatment[i];
         con_sqr_sum += (*y[i]) * (*y[i]) * wt[i] * (1- treatment[i]);
     }
